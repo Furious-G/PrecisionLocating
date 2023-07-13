@@ -1,0 +1,167 @@
+/*  
+######################   
+	base 
+###################### 
+*/
+
+// variables
+
+$xblue:#0054a6;
+$xgreen:#006f3c;
+
+.alignleft {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+img.alignleft,
+img.alignright,
+img.float-left,
+img.float-right {
+    @media only screen and (max-width: 640px) {
+        float: none !important;
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0 !important;
+        margin-bottom: 20px;
+    }
+}
+
+.alignright {
+    float: right;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+
+
+.grid-container {
+    max-width: 71em;
+}
+
+.whiteText {
+    color: #fff;
+}
+
+a {
+    color: $xblue;
+
+    &:hover {
+        color: $xgreen;
+    }
+}
+
+section {
+    padding: 60px 0;
+}
+
+h1,
+h2 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+}
+
+h3 {
+    line-height: 1.1em;
+}
+
+h4 {
+    font-size: 1.4em;
+    margin-top: 30px;
+
+    @media only screen and (max-width: 640px) {}
+}
+
+h2 {
+
+    /* Extra small devices (phones, 600px and down) */
+    @media only screen and (max-width: 640px) {
+        font-size: 2em;
+
+    }
+
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+}
+
+a {
+    -webkit-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+    outline: none;
+}
+
+ol li {
+    padding-bottom: 15px
+}
+
+.stickyPad {
+    padding-top: 100px !important;
+    ;
+}
+
+.textBlock {
+    display: block;
+}
+
+.cta {
+    span {
+        color: #fff;
+        font-size: 1.5em;
+        font-weight: 900;
+        display: block;
+    }
+
+    .button {
+        background: #fff;
+        color: #000;
+        font-size: 1.5em;
+        border-radius: 30px;
+        font-weight: 600;
+
+        &:hover {
+            background: $xblue;
+            color: #fff;
+        }
+    }
+}
+
+// Buttons
+
+.button {
+    background: $xgreen;
+    border: solid 1px $xgreen;
+    border-radius: 20px;
+    padding: .85em 1.3em;
+    &.contact{
+    	border:none;
+    }
+
+    &:hover {
+        background: #fff;
+        color: $xgreen;
+    }
+
+    margin-top:30px;
+
+    &.blue {
+        background: $xblue;
+        border-color: $xblue;
+
+        @media only screen and (max-width: 640px) {
+            display: block;
+
+        }
+
+        &:hover {
+            color: $xblue;
+            background: #fff;
+
+        }
+    }
+}

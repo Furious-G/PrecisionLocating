@@ -1,0 +1,279 @@
+/*  
+######################   
+    Inner
+###################### 
+*/
+
+.titleBar {
+    background: $xblue;
+    background-image: url("../../images/topBGbig.png");
+    color: #fff;
+    margin-bottom: 40px;
+
+    h1,
+    span {
+        font-size: 3em;
+        padding: 20px 0;
+        margin: 0;
+        font-weight: 400;
+        display: block;
+        @media only screen and (max-width: 640px){
+            font-size:2.3em;
+        }
+    }
+}
+
+
+.inner-content {
+    ul {
+        padding-right: 10px;
+        margin-left: 25px !important;
+
+        li {
+            padding: 10px 0;
+
+            i {
+                color: $xgreen;
+            }
+        }
+    }
+
+    h1.alt {
+        font-size: 1.9375rem;
+        margin-bottom: 30px;
+            @media only screen and (max-width: 640px){
+        line-height:1.2em;
+    }
+    }
+
+    section {
+        &:not(:first-child) {
+            padding: 20px 0;
+        }
+
+        &:first-child {
+            padding-top: 0;
+            padding-bottom: 20px
+        }
+
+        &:last-child {
+            padding-bottom: 40px;
+        }
+
+        p:last-child {
+            margin: 0;
+        }
+    }
+
+    img.float-right {
+        padding-left: 20px;
+    }
+
+    img.float-left {
+        padding-right: 20px;
+    }
+
+}
+
+.inner.cta {
+    padding: 0px;
+    background-attachment: initial !important;
+
+    .over {
+        background-color: rgba(0, 0, 0, .4)
+    }
+}
+
+.services {
+
+    h5 {
+        font-weight: 600;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        line-height: 1em;
+    }
+
+    .serviceBox {
+        min-height: 500px;
+        position: relative;
+        border: solid 1px #aaa;
+        border-radius: 6px;
+
+        img {
+            border-radius: 6px;
+        }
+
+        .button {
+            position: absolute;
+            bottom: 0;
+        }
+    }
+
+}
+
+
+
+.sideBox {
+    a {
+        font-size: 1.2em;
+        display: block;
+        margin-bottom: 10px;
+
+        &:hover {
+            color: $xgreen;
+        }
+    }
+
+    h5 {
+        border-bottom: solid 1px $xblue;
+        padding-bottom: 5px;
+        font-size: 1.35em;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+
+    margin-bottom:20px;
+}
+
+
+.photoside {
+     @media only screen and (max-width: 640px){
+        padding-top:30px;
+    }
+    figure {
+        margin-bottom: 20px;
+        font-size: .7em;
+    }
+
+    img {
+        margin-bottom: 5px;
+    }
+}
+
+.newHead {
+    margin-top: 30px;
+}
+
+.leftimg {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+//contact form
+
+.contact {
+
+    .sideBox a {
+        font-size: initial;
+    }
+
+    .formFlex {
+        display: flex;
+
+        label:last-child {
+            margin-left: 10px !important;
+        }
+    }
+
+    form {
+
+        .button {
+            margin-top: 15px;
+            float: right;
+        }
+
+        ::placeholder {
+            color: #8a8a8a;
+        }
+
+        [type="month"],
+        [type="email"],
+        [type="password"],
+        [type="search"],
+        [type="tel"],
+        [type="text"] {
+            height: 60px;
+            box-shadow: none;
+            ;
+        }
+
+        input[type=checkbox] {
+            height: 15px !important;
+            transform: scale(1.2);
+        }
+
+        .checkbox {
+            padding: 20px 0;
+        }
+    }
+}
+
+.leftPhoto {
+    width: 400px;
+}
+
+.testimonials {
+
+    .item {
+        .itemBox {
+            border: solid 1px;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 5px;
+            background: #fff;
+        }
+
+        i {
+            display: block;
+        }
+
+        .stars i {
+            display: inline-block !important;
+            margin-bottom: 10px;
+            color: #fcc318;
+        }
+    }
+}
+
+.servicepad{
+    padding-right:30px !important;
+     @media only screen and (max-width: 640px){
+        padding-right: 0 !important;
+    }
+}
+
+.article-header{
+    display: none;;
+}
+
+
+
+.petbox img {
+  object-fit: cover;
+  width: 330px;
+  height: 178px;
+}
+
+
+// .petsInner .auth {
+//     font-size: 1.7em;
+
+//     i {
+//         font-size: .5em;
+//         color: #848484
+//     }
+//     .blurb{
+//         font-size: initial;
+//         font-weight: normal;
+//         padding-top:15px;
+//     }
+// }
+
+// .reveal{
+//     font-size:1.5em;
+//     font-weight: 600;
+// }
+
+// .click{
+//     cursor: pointer;
+// }

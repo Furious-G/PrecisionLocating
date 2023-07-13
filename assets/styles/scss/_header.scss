@@ -1,0 +1,124 @@
+/*  
+######################   
+    header
+###################### 
+*/
+
+header{
+    z-index: 99 !important;;
+  position: relative;
+}
+
+
+
+.top-bar {
+    padding: 15px;
+    justify-content: space-between;
+    background: #fff;
+
+    .headerLogo {
+        height: 70px;
+        -webkit-transition: all 0.25s ease-out;
+        transition: all 0.25s ease-out;
+    }
+
+    ul {
+        background: transparent;
+
+        i{
+            font-size: 1.7em;
+            &:hover{
+                color:$xblue;
+            }
+        }
+    }
+
+    .active > a {
+        background: transparent;
+        color: $xblue;
+        // border-bottom:solid 1px $xblue;
+    }
+
+    a {
+        color: #333;
+        font-size: 1.2em;
+        transition: unset;
+
+        &:hover {
+            color: $xblue;
+        }
+
+    }
+
+    .headerPhone {
+        font-weight: 600;
+        font-size: 1.3em
+    }
+
+    .submenu {
+        background: #fff;
+        font-size: .8em;
+       
+
+        a:hover {
+            color: #fff;
+            background: $xblue;
+            
+        }
+    }
+
+}
+
+
+#top-bar-menu.is-stuck {
+    background: #fff;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+    -webkit-animation-name: slideInDown;
+    animation-name: slideInDown;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    top: 0;
+    -webkit-box-shadow: 0px 10px 17px -6px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 10px 17px -6px rgba(0, 0, 0, 0.57);
+    box-shadow: 0px 10px 17px -6px rgba(0, 0, 0, 0.57);
+
+    .headerLogo {
+        height: 50px;
+    }
+
+    a {
+        font-size: 1em;
+        ;
+    }
+}
+
+.off-canvas{
+
+    background: $xblue;
+
+    .offBox{
+        padding:15px;
+        font-size:1.4em;
+        a{
+            color:#fff;
+        }
+    }
+    .accordion-menu {
+
+        a{
+            color:#fff;
+        }
+
+        .submenu{
+            padding-left:10px
+        }
+    }
+}
+
+
+li.is-dropdown-submenu-parent > a::after {
+
+    border-color: #333 transparent transparent;
+}

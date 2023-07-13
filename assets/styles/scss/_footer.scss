@@ -1,0 +1,95 @@
+/*  
+######################   
+    Footer 
+###################### 
+*/
+
+.footer {
+    background: $xblue;
+    padding: 40px;
+    margin-top: 0;
+
+    .inner-footer {
+        color: #ddd;
+        font-size: .8em;
+
+        .addy {
+            margin-bottom: 10px;
+        }
+
+        .num {
+            display: block;
+            padding-bottom: 5px;
+        }
+
+        a {
+            color: #ddd;
+            padding: 6px 0;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+
+        .badges {
+            @media only screen and (max-width: 640px) {
+                margin: 0 auto;
+                padding-top: 30px;
+
+            }
+
+            ;
+
+            img {
+                margin: 0 6px;
+            }
+
+            div {
+                margin-top: 20px
+            }
+        }
+
+        .menu {
+            display: block;
+            text-align: center;
+
+            .active>a {
+                background: none;
+            }
+
+
+        }
+
+    }
+
+}
+
+.subFooter {
+    padding: 10px;
+    background: #033a72;
+
+    .sub-inner {
+        font-size: .75em;
+        color: #6a8db1;
+
+        @media only screen and (max-width: 640px) {
+            text-align: center;
+
+        }
+    }
+
+    a {
+        color: #6a8db1;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.mobCenter {
+    @media only screen and (max-width: 640px) {
+        margin: 0 auto;
+        padding-bottom: 30px;
+    }
+}

@@ -1,0 +1,258 @@
+/*  
+######################   
+    home
+###################### 
+*/
+.headerHero{
+    padding: 0;
+    color:#fff;
+    .hslide{
+        padding-top:60px;
+    height: calc(100vh - 100px);
+    background-size: cover !important;
+    background-position: center !important;
+    }
+    span{
+        font-size:1.2em;
+        display: block;
+    }
+
+}
+
+.sliderChart{
+    width:400px;
+    display: inline-block !important;
+}
+
+.testslide {
+    background: url("../../images/hero_bg.jpg") !important;
+    height: calc(100vh - 70px);
+    background-size: cover !important;
+}
+
+
+.homeowner {
+    background: url("../../images/homeownerslide.jpg") !important;
+    height: calc(100vh - 70px);
+    background-size: cover !important;
+}
+
+.refine {
+    background: url("../../images/refine.jpg") !important;
+    padding:60px;
+    background-size: cover !important;
+    background-attachment: fixed !important;
+}
+
+.bubble {
+    background: url("../../images/bubblebg.jpg");
+    background-size: cover;
+    padding: 60px 0;
+}
+
+.pipesBg {
+    background: url("../../images/pipes.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.pipesPat {
+    background: url("../../images/pipesbg.jpg");
+}
+
+.fcard {
+    background: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    display: block;
+    color: #333;
+
+    i {
+        font-size: 70px;
+        display: block;
+        color: $xgreen;
+    }
+
+    span {
+        font-size: 20px;
+        font-weight: 900;
+        margin-top: 20px;
+        display: block;
+    }
+
+    &:hover {
+        scale: 1.1;
+        -webkit-box-shadow: -1px -1px 18px 6px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: -1px -1px 18px 6px rgba(0, 0, 0, 0.4);
+        box-shadow: -1px -1px 18px 6px rgba(0, 0, 0, 0.4);
+    }
+}
+
+.speclist {
+    font-size: 18px;
+    padding-right: 10px;
+    margin-left: 25px !important;
+
+    li {
+        padding: 10px 0;
+        font-weight: 600;
+
+        i {
+            color: $xgreen;
+        }
+    }
+}
+
+.call {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.quote {
+    margin-top: 30px;
+}
+
+.auth {
+    display: block;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.quote {
+
+    .slick-arrow:before {
+        font-size: 40px !important;
+        color: rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .slick-arrow:hover:before {
+        font-size: 40px !important;
+        color: rgb(255, 255, 255) !important;
+    }
+
+    .slick-prev {
+        left: -70px !important;
+    }
+
+    .slick-next {
+        right: -70px !important;
+    }
+    .slick-dots li button::before{
+        font-size:16px;
+    }
+    .slick-dots{
+        bottom:-40px !important;
+    }
+
+    .slick-dots li.slick-active button::before {
+        opacity: .75;
+        color: #fff;
+    }
+}
+
+#hero {
+    &:hover button {
+        display: block !important;
+    }
+
+    .slick-prev {
+        left: 25px !important;
+    }
+
+    .slick-next {
+        right: 55px !important;
+    }
+
+    .slick-arrow:before {
+        font-size: 50px !important;
+        color: rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .slick-arrow:hover:before {
+        font-size: 50px !important;
+        color: rgb(255, 255, 255) !important;
+    }
+
+    button {
+        z-index: 99;
+        display: none !important;
+
+    }
+
+}
+
+.slick-prev:before {
+    content: "\f137" !important;
+    font-family: 'Font Awesome 6 Pro' !important;
+}
+
+.slick-next:before {
+    content: "\f138" !important;
+    font-family: 'Font Awesome 6 Pro' !important;
+}
+
+
+h2.pet{
+    margin-bottom:20px;
+}
+
+.petbox{
+  border:solid 1px #868686;
+  border-radius:6px;
+    @media only screen and (max-width: 640px) {
+        margin-top:30px;
+
+    }
+  span{
+float:left;
+  font-size:1.4em;
+  display:block;
+  padding-top:4px;
+  font-weight: 600;
+      width: 100%;
+    /* text-align: left; */
+    background-color: #eee;
+    padding: 7px;
+    text-align: left;
+    i{
+        font-size:0.6em;
+            color: #999;
+    }
+  }
+  i{
+    float:right;
+    padding-top:4px;
+  }
+  .blurb{
+    padding-top:10px;
+    clear:both;
+  }
+
+}
+
+.pet-modal{
+      span{
+float:left;
+  font-size:1.6em;
+  display:block;
+  padding-top:4px;
+  font-weight: 600;
+  }
+  i{
+    float:right;
+    padding-top:4px;
+  }
+  .blurb{
+    clear:both;
+    padding-top:10px;
+  }
+}
+
+.click{
+    cursor: pointer;
+}
+
+
+
+
+
