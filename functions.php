@@ -107,10 +107,19 @@ add_filter('manage_posts_columns', 'column_order');
 function yoast_seo_admin_remove_columns( $columns ) {
   unset($columns['wpseo-score']);
   unset($columns['wpseo-score-readability']);
+  unset($columns['comments']);
   return $columns;
 }
 
 add_filter( 'manage_edit-page_columns', 'yoast_seo_admin_remove_columns', 10, 1 );
+
+function media_remove_columns( $columns ) {
+  unset($columns['author']);
+  unset($columns['comments']);
+  return $columns;
+}
+
+add_filter( 'manage_media_columns', 'media_remove_columns', 10, 1 );
 
 
 

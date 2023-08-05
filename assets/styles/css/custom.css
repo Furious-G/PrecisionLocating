@@ -607,8 +607,18 @@ h2.pet {
   display: -ms-flexbox;
   display: flex;
 }
+@media only screen and (max-width: 640px) {
+  .contact .formFlex {
+    display: block;
+  }
+}
 .contact .formFlex label:last-child {
   margin-left: 10px !important;
+}
+@media only screen and (max-width: 640px) {
+  .contact .formFlex label:last-child {
+    margin-left: 0 !important;
+  }
 }
 .contact form .button {
   margin-top: 15px;
