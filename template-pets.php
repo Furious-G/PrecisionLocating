@@ -34,22 +34,14 @@ query_posts(
             </div>
             <section>
                 <div class="grid-x grid-padding-x grid-margin-x grid-padding-y grid-margin-y large-up-3  petGrid">
-                    <?php
-                    // $count = $_GET['count'];
-                    
-                    // if (isset($count)) {
-                    // $i = $count;
-                    // } else {
-                    $i = 0;
-                    // }
-                    // echo $_GET['count'];
-                    ?>
                     <?php if (have_posts()):
+
                         while (have_posts()):
-                            the_post(); ?>
-                            <?php $i++; ?>
+                            the_post();
+                            $petid = get_the_ID();
+                            ?>
                             <?php $post_date = get_the_date('F j, Y'); ?>
-                            <div class="cell petbox click" data-open="Modal<?php echo $i; ?>">
+                            <div class="cell petbox click" data-open="Modal<?php echo $petid; ?>">
                                 <div>
                                     <img src="<?php the_field('pet_image'); ?>" /><?php echo esc_attr($alt); ?>
                                 </div>
@@ -63,7 +55,7 @@ query_posts(
                                     <?php the_field('blurb'); ?>
                                 </div>
                             </div>
-                            <div class="reveal small pet-modal" data-index="<?php echo $i; ?>" id="Modal<?php echo $i; ?>"
+                            <div class="reveal small pet-modal" data-append-to=".petGrid" id="Modal<?php echo $petid; ?>"
                                 data-reveal>
                                 <img src="<?php the_field('pet_image'); ?>" />
                                 <span>
@@ -100,7 +92,7 @@ query_posts(
 
 
 
-        // jQuery
+
         // $('.petGrid').infiniteScroll({
         //     path: '.next',
         //     append: '.petbox',
@@ -111,32 +103,14 @@ query_posts(
         //     hideNav: '.pagi',
         // });
 
+        // $('.petGrid').on('append.infiniteScroll', function (event, body, path, items, response) {
+        //     // myfunction();
+        //     Foundation.reInit(['reveal']);
 
-
-        // jQuery
-        $('.petGrid').on('append.infiniteScroll', function (event, body, path, items, response) {
-            // myfunction();
-            Foundation.reInit(['reveal']);
-
-        });
-
-        // $('.petGrid').infiniteScroll({
-        //     // Configure the Infinite Scroll options here
-        //     // For example:
-        //     path: '.next',
-        //     append: '.petbox',
-        //     history: false,
         // });
 
-        function myfunction() {
-            var type = $('.pet-modal').last().attr('data-index');
-            var oldURL = window.location.protocol + "//" + window.location.host + window.location.pathname;
-            var newUrl = oldURL + "?count=" + type;
-            if (window.history != 'undefined' && window.history.pushState != 'undefined') {
-                window.history.pushState({ path: newUrl }, '', newUrl);
-            }
-            return false;
-        }
+
+
 
     });
 </script>
