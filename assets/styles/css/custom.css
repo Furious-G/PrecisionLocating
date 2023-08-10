@@ -698,6 +698,16 @@ h2.pet {
   height: 178px;
 }
 
+.page-template-template-pets .petbox {
+  -webkit-transition: 200ms ease-in-out;
+  transition: 200ms ease-in-out;
+}
+.page-template-template-pets .petbox:hover {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  scale: 1.04;
+}
+
 /*  
 ######################   
 	Utility 
