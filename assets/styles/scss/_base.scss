@@ -6,8 +6,8 @@
 
 // variables
 
-$xblue:#0054a6;
-$xgreen:#006f3c;
+$xblue: #0054a6;
+$xgreen: #006f3c;
 
 .alignleft {
     float: left;
@@ -138,8 +138,21 @@ ol li {
     border: solid 1px $xgreen;
     border-radius: 20px;
     padding: .85em 1.3em;
-    &.contact{
-    	border:none;
+
+    &.contact {
+        border: none;
+    }
+
+    &.large {
+        font-size: 1.5rem;
+        border-radius: 100vw;
+    }
+
+    &.center {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        margin-block: 20px;
     }
 
     &:hover {

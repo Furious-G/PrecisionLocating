@@ -122,6 +122,18 @@ ol li {
 .button.contact {
   border: none;
 }
+.button.large {
+  font-size: 1.5rem;
+  border-radius: 100vw;
+}
+.button.center {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-block: 20px;
+}
 .button:hover {
   background: #fff;
   color: #006f3c;
@@ -487,7 +499,7 @@ h2.pet {
 @media only screen and (max-width: 640px) {
   .titleBar h1,
   .titleBar span {
-    font-size: 2.3em;
+    font-size: 2em;
   }
 }
 
@@ -508,6 +520,7 @@ h2.pet {
 @media only screen and (max-width: 640px) {
   .inner-content h1.alt {
     line-height: 1.2em;
+    font-size: 1.5rem;
   }
 }
 .inner-content section:not(:first-child) {
@@ -602,6 +615,11 @@ h2.pet {
 .contact .sideBox a {
   font-size: initial;
 }
+@media only screen and (min-width: 640px) {
+  .contact.apply form {
+    width: 90%;
+  }
+}
 .contact .formFlex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -612,11 +630,16 @@ h2.pet {
     display: block;
   }
 }
-.contact .formFlex label:last-child {
+.contact .formFlex label {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.contact .formFlex label:not(:first-child) {
   margin-left: 10px !important;
 }
 @media only screen and (max-width: 640px) {
-  .contact .formFlex label:last-child {
+  .contact .formFlex label:not(:first-child) {
     margin-left: 0 !important;
   }
 }
@@ -625,19 +648,19 @@ h2.pet {
   float: right;
 }
 .contact form ::-webkit-input-placeholder {
-  color: #8a8a8a;
+  color: #4d4d4d;
 }
 .contact form ::-moz-placeholder {
-  color: #8a8a8a;
+  color: #4d4d4d;
 }
 .contact form :-ms-input-placeholder {
-  color: #8a8a8a;
+  color: #4d4d4d;
 }
 .contact form ::-ms-input-placeholder {
-  color: #8a8a8a;
+  color: #4d4d4d;
 }
 .contact form ::placeholder {
-  color: #8a8a8a;
+  color: #4d4d4d;
 }
 .contact form [type=month],
 .contact form [type=email],
@@ -656,6 +679,48 @@ h2.pet {
 }
 .contact form .checkbox {
   padding: 20px 0;
+}
+.contact.apply textarea {
+  height: 150px;
+}
+.contact.apply fieldset legend {
+  padding: 0 10px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+.contact.apply fieldset {
+  all: revert;
+  border: solid 1px #c2c2c2;
+  -webkit-margin-after: 30px;
+          margin-block-end: 30px;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.02) !important;
+}
+.contact.apply .button {
+  font-size: 1.3rem;
+  margin: 0 auto;
+  display: block;
+  width: 50%;
+  float: none;
+  border-radius: 100vw;
+}
+.contact.apply [type=radio] {
+  scale: 1.4;
+  margin-left: 5px;
+}
+.contact.apply .wpcf7-not-valid-tip {
+  position: relative;
+  top: -13px;
+}
+@media only screen and (max-width: 640px) {
+  .contact.apply .wpcf7-form-control-wrap {
+    display: block;
+    margin-top: 10px;
+  }
+  .contact.apply fieldset {
+    padding: 15px;
+  }
 }
 
 .leftPhoto {

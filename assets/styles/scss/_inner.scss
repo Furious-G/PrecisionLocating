@@ -17,8 +17,9 @@
         margin: 0;
         font-weight: 400;
         display: block;
-        @media only screen and (max-width: 640px){
-            font-size:2.3em;
+
+        @media only screen and (max-width: 640px) {
+            font-size: 2em;
         }
     }
 }
@@ -41,9 +42,11 @@
     h1.alt {
         font-size: 1.9375rem;
         margin-bottom: 30px;
-            @media only screen and (max-width: 640px){
-        line-height:1.2em;
-    }
+
+        @media only screen and (max-width: 640px) {
+            line-height: 1.2em;
+            font-size: 1.5rem;
+        }
     }
 
     section {
@@ -137,9 +140,10 @@
 
 
 .photoside {
-     @media only screen and (max-width: 640px){
-        padding-top:30px;
+    @media only screen and (max-width: 640px) {
+        padding-top: 30px;
     }
+
     figure {
         margin-bottom: 20px;
         font-size: .7em;
@@ -167,14 +171,27 @@
         font-size: initial;
     }
 
+    @media only screen and (min-width: 640px) {
+        &.apply form {
+            width: 90%
+        }
+    }
+
     .formFlex {
         display: flex;
-        @media only screen and (max-width: 640px){
-            display:block;
+
+        @media only screen and (max-width: 640px) {
+            display: block;
         }
-        label:last-child {
+
+        label {
+            flex-grow: 1;
+        }
+
+        label:not(:first-child) {
             margin-left: 10px !important;
-            @media only screen and (max-width: 640px){
+
+            @media only screen and (max-width: 640px) {
                 margin-left: 0 !important;
             }
         }
@@ -188,7 +205,7 @@
         }
 
         ::placeholder {
-            color: #8a8a8a;
+            color: #4d4d4d;
         }
 
         [type="month"],
@@ -210,6 +227,59 @@
         .checkbox {
             padding: 20px 0;
         }
+    }
+
+    &.apply {
+        textarea {
+            height: 150px;
+        }
+
+        fieldset legend {
+            padding: 0 10px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        fieldset {
+            all: revert;
+            border: solid 1px #c2c2c2;
+            margin-block-end: 30px;
+            padding: 30px;
+            background: rgba(0, 0, 0, .02) !important;
+        }
+
+        .button {
+            font-size: 1.3rem;
+            margin: 0 auto;
+            display: block;
+            width: 50%;
+            float: none;
+            border-radius: 100vw;
+        }
+
+        [type="radio"] {
+            scale: 1.4;
+            margin-left: 5px;
+        }
+
+        .wpcf7-not-valid-tip {
+            position: relative;
+            top: -13px;
+        }
+
+        @media only screen and (max-width: 640px) {
+            .wpcf7-form-control-wrap {
+                display: block;
+                margin-top: 10px;
+            }
+
+            fieldset {
+                padding: 15px;
+            }
+
+        }
+
     }
 }
 
@@ -240,34 +310,36 @@
     }
 }
 
-.servicepad{
-    padding-right:30px !important;
-     @media only screen and (max-width: 640px){
+.servicepad {
+    padding-right: 30px !important;
+
+    @media only screen and (max-width: 640px) {
         padding-right: 0 !important;
     }
 }
 
-.article-header{
-    display: none;;
+.article-header {
+    display: none;
+    ;
 }
 
 
 
 .petbox img {
-  object-fit: cover;
-  width: 330px;
-  height: 178px;
+    object-fit: cover;
+    width: 330px;
+    height: 178px;
 }
 
 
-  .page-template-template-pets .petbox{
-    transition:200ms ease-in-out;
-    &:hover{
-        box-shadow: 0px 0px 10px  rgba(0,0,0,.3);
-        scale:1.04
-      
-      }
-  }
+.page-template-template-pets .petbox {
+    transition: 200ms ease-in-out;
+
+    &:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, .3);
+        scale: 1.04
+    }
+}
 
 
 // .petsInner .auth {
