@@ -14,16 +14,15 @@ get_header(); ?>
         z-index: 99;
     }
 </style>
-<div class="hiring"><a href="mailto:precisionlocating.arizona@gmail.com" target="_blank"><img
-            src="/wp-content/uploads/2023/07/hiring.png"></a></div>
+<div class="hiring"><a href="/jobs/" target=" _blank"><img src="/wp-content/uploads/2023/07/hiring.png"></a></div>
 <section class="headerHero" id="hero">
 
 
-    <?php if (have_rows('slider')): ?>
-        <?php while (have_rows('slider')):
+    <?php if (have_rows('slider')) : ?>
+        <?php while (have_rows('slider')) :
             the_row(); ?>
-            <?php if (have_rows('slides')): ?>
-                <?php while (have_rows('slides')):
+            <?php if (have_rows('slides')) : ?>
+                <?php while (have_rows('slides')) :
                     the_row(); ?>
                     <div class="hslide" style="background: url('<?php the_sub_field('background_image'); ?>');">
                         <div class="grid-container">
@@ -54,8 +53,8 @@ get_header(); ?>
 
 
 
-<?php if (have_rows('section_2')): ?>
-    <?php while (have_rows('section_2')):
+<?php if (have_rows('section_2')) : ?>
+    <?php while (have_rows('section_2')) :
         the_row(); ?>
         <section class="grid-container">
             <div class="grid-x grid-padding-x grid-padding-y align-middle">
@@ -84,15 +83,13 @@ get_header(); ?>
                 </a>
             </div>
             <div class="cell large-4">
-                <a href="/services/post-tension-cables-and-slab/" class="fcard text-center wow zoomIn"
-                    data-wow-duration=".8s">
+                <a href="/services/post-tension-cables-and-slab/" class="fcard text-center wow zoomIn" data-wow-duration=".8s">
                     <i class="fa-regular fa-table-cells"></i>
                     <span>Post Tension Locating</span>
                 </a>
             </div>
             <div class="cell large-4">
-                <a href="/services/video-inspection-and-sewer-locating/" class="fcard text-center wow zoomIn"
-                    data-wow-duration=".8s">
+                <a href="/services/video-inspection-and-sewer-locating/" class="fcard text-center wow zoomIn" data-wow-duration=".8s">
                     <i class="fa-solid fa-pipe-valve"></i>
                     <span>Sewer/Drain Inspections</span>
                 </a>
@@ -100,8 +97,8 @@ get_header(); ?>
         </div>
     </div>
 </section>
-<?php if (have_rows('section_3')): ?>
-    <?php while (have_rows('section_3')):
+<?php if (have_rows('section_3')) : ?>
+    <?php while (have_rows('section_3')) :
         the_row(); ?>
         <section>
             <div class="grid-container">
@@ -111,8 +108,8 @@ get_header(); ?>
                             <?php the_sub_field('title'); ?>
                         </h2>
                         <ul class="speclist fa-ul">
-                            <?php if (have_rows('list')): ?>
-                                <?php while (have_rows('list')):
+                            <?php if (have_rows('list')) : ?>
+                                <?php while (have_rows('list')) :
                                     the_row(); ?>
                                     <li>
                                         <span class="fa-li">
@@ -124,7 +121,7 @@ get_header(); ?>
                             <?php endif; ?>
                         </ul>
                         <span class="call">
-                            <?php if (get_sub_field('display_call_now')): ?>
+                            <?php if (get_sub_field('display_call_now')) : ?>
                                 <span class='call'>Call Now
                                     <?php the_field('phone_number', 'options'); ?>
                                 </span>
@@ -155,15 +152,15 @@ $the_query = new WP_Query($args);
                 <h2>What Our Customers Say</h2>
                 <div class="quote" id="quote">
                     <!-- Loop testimonials -->
-                    <?php if ($the_query->have_posts()): ?>
-                        <?php while ($the_query->have_posts()):
+                    <?php if ($the_query->have_posts()) : ?>
+                        <?php while ($the_query->have_posts()) :
                             $the_query->the_post(); ?>
                             <div>
                                 &ldquo;
                                 <?php the_field('testimonial', false, false); ?>&rdquo;
                                 <span class="auth">
                                     <?php the_field('name'); ?>
-                                    <?php if (get_field('titlecompany')): ?>
+                                    <?php if (get_field('titlecompany')) : ?>
                                         <i>,
                                             <?php the_field('titlecompany'); ?>
                                         </i>
@@ -179,8 +176,8 @@ $the_query = new WP_Query($args);
         </div>
     </div>
 </section>
-<?php if (have_rows('section_5')): ?>
-    <?php while (have_rows('section_5')):
+<?php if (have_rows('section_5')) : ?>
+    <?php while (have_rows('section_5')) :
         the_row(); ?>
         <section>
             <div class="grid-container">
@@ -227,8 +224,8 @@ $pet_query = new WP_Query($pets); ?>
     <div class="grid-container text-center">
         <h2 class="pet text-center"><i class="fa-solid fa-paw"></i> Precision Pets</h2>
         <div class="grid-x grid-padding-x grid-padding-y grid-margin-x  align-center">
-            <?php if ($pet_query->have_posts()): ?>
-                <?php while ($pet_query->have_posts()):
+            <?php if ($pet_query->have_posts()) : ?>
+                <?php while ($pet_query->have_posts()) :
                     $pet_query->the_post(); ?>
                     <?php $post_date = get_the_date('F j, Y'); ?>
                     <div class="cell large-4 petbox">
@@ -254,7 +251,7 @@ $pet_query = new WP_Query($pets); ?>
 </section>
 
 <script type="text/javascript">
-    jQuery(document).ready(function ($) {
+    jQuery(document).ready(function($) {
 
 
 
@@ -313,9 +310,9 @@ $pet_query = new WP_Query($pets); ?>
 
 
 <!--             </div>
-            <?php if ($pet_query->have_posts()): ?>
-            <?php while ($pet_query->have_posts()):
-                $pet_query->the_post(); ?>
+            <?php if ($pet_query->have_posts()) : ?>
+            <?php while ($pet_query->have_posts()) :
+                    $pet_query->the_post(); ?>
             <div class="cell large-6 brad click">
                 <img src="<?php the_field('pet_image'); ?>" />
             </div>
